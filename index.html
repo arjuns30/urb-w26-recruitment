@@ -8,22 +8,21 @@
   <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/product-sans" />
   <style>
     :root {
-      --navy: #0B1F3A;
-      --navy-soft: rgba(11, 31, 58, 0.12);
-      --bg: #f4f7fc;
+      --navy: #1E40AF;
+      --navy-bright: #3B82F6;
+      --navy-soft: rgba(30, 64, 175, 0.15);
+      --navy-light: rgba(30, 64, 175, 0.08);
+      --bg: #ffffff;
       --text: #0f172a;
       --muted: #4b5563;
       --card: #ffffff;
-      --border: rgba(11, 31, 58, 0.14);
+      --border: rgba(30, 64, 175, 0.25);
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: "Product Sans", "Google Sans", "Inter", "Helvetica Neue", Arial, sans-serif;
-      background:
-        radial-gradient(1200px 380px at 10% 10%, rgba(11, 31, 58, 0.10), transparent 60%),
-        radial-gradient(900px 260px at 90% 18%, rgba(11, 31, 58, 0.12), transparent 55%),
-        var(--bg);
+      background: var(--bg);
       color: var(--text);
       line-height: 1.55;
     }
@@ -33,24 +32,33 @@
       margin: 0 auto;
       padding: 0;
     }
+    .hero-photo {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0;
+      max-height: 400px;
+      object-fit: cover;
+    }
+    .hero-photo-placeholder {
+      width: 100%;
+      height: 300px;
+      background: linear-gradient(135deg, var(--navy-soft) 0%, var(--navy-light) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--navy);
+      font-weight: 900;
+      font-size: 20px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: 3px dashed var(--navy);
+    }
     .banner {
       width: 100%;
       height: auto;
       display: block;
       margin: 0;
-    }
-    .banner-placeholder {
-      width: 100%;
-      height: 200px;
-      background: linear-gradient(135deg, var(--navy) 0%, rgba(11, 31, 58, 0.8) 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-weight: 900;
-      font-size: 24px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
     }
     .card {
       background: transparent;
@@ -60,18 +68,18 @@
       box-shadow: none;
     }
     .accent-line {
-      height: 6px;
-      background: linear-gradient(90deg, var(--navy), rgba(11,31,58,0.12));
+      height: 8px;
+      background: linear-gradient(90deg, var(--navy), var(--navy-bright));
       width: 100%;
-      border-radius: 99px;
+      border-radius: 0;
     }
     .header {
       padding: 32px 24px 24px;
       display: flex;
       align-items: center;
       gap: 20px;
-      background: linear-gradient(120deg, rgba(11,31,58,0.08) 0%, rgba(11,31,58,0.02) 100%);
-      border-bottom: 2px solid var(--border);
+      background: var(--navy-light);
+      border-bottom: 4px solid var(--navy);
     }
     .logo {
       display: block;
@@ -79,7 +87,7 @@
       width: 28vw;
       min-width: 120px;
       height: auto;
-      filter: drop-shadow(0 8px 24px rgba(11, 31, 58, 0.25));
+      filter: drop-shadow(0 8px 24px rgba(30, 64, 175, 0.3));
       transition: transform 0.3s ease;
     }
     .logo:hover {
@@ -115,9 +123,11 @@
       border: none;
       margin: 0;
       position: relative;
+      border-left: 5px solid var(--navy);
     }
     .section:nth-child(even) {
-      background: linear-gradient(180deg, rgba(11,31,58,0.03) 0%, transparent 100%);
+      background: var(--navy-light);
+      border-left-color: var(--navy-bright);
     }
     .section-header-img {
       width: 100%;
@@ -126,13 +136,13 @@
       display: block;
       margin: 0 auto 24px;
       border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(11, 31, 58, 0.15);
+      box-shadow: 0 8px 24px rgba(30, 64, 175, 0.25);
     }
     .section-header-placeholder {
       width: 100%;
       max-width: 600px;
       height: 80px;
-      background: linear-gradient(135deg, var(--navy) 0%, rgba(11, 31, 58, 0.7) 100%);
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-bright) 100%);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -143,7 +153,7 @@
       text-transform: uppercase;
       margin: 0 auto 24px;
       border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(11, 31, 58, 0.15);
+      box-shadow: 0 8px 24px rgba(30, 64, 175, 0.25);
     }
     .section h2 {
       position: relative;
@@ -159,11 +169,11 @@
     .section h2::after {
       content: "";
       display: block;
-      width: 80px;
-      height: 4px;
-      background: linear-gradient(90deg, transparent, var(--navy), transparent);
+      width: 120px;
+      height: 5px;
+      background: linear-gradient(90deg, transparent, var(--navy), var(--navy-bright), var(--navy), transparent);
       margin: 12px auto 0;
-      border-radius: 2px;
+      border-radius: 3px;
     }
     .p { margin: 0 0 16px; color: var(--text); font-size: 16px; }
     .muted { color: var(--muted); }
@@ -178,12 +188,12 @@
       height: 200px;
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 8px 20px rgba(11, 31, 58, 0.12);
+      box-shadow: 0 8px 20px rgba(30, 64, 175, 0.2);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .image-item:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 28px rgba(11, 31, 58, 0.2);
+      box-shadow: 0 12px 28px rgba(30, 64, 175, 0.3);
     }
     .image-item img {
       width: 100%;
@@ -193,13 +203,14 @@
     .image-placeholder {
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, rgba(11,31,58,0.15) 0%, rgba(11,31,58,0.05) 100%);
+      background: linear-gradient(135deg, var(--navy-soft) 0%, var(--navy-light) 100%);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--muted);
+      color: var(--navy);
       font-size: 14px;
       font-weight: 600;
+      border: 2px dashed var(--navy);
     }
     .grid {
       display: grid;
@@ -211,11 +222,11 @@
       .grid { grid-template-columns: 1fr 1fr; }
     }
     .pill {
-      border: 2px solid rgba(11,31,58,0.25);
+      border: 3px solid var(--navy);
       border-radius: 18px;
       padding: 20px 18px;
-      background: linear-gradient(130deg, rgba(11,31,58,0.12), rgba(11,31,58,0.04));
-      box-shadow: 0 12px 32px rgba(11, 31, 58, 0.1);
+      background: linear-gradient(130deg, var(--navy-light), rgba(30, 64, 175, 0.05));
+      box-shadow: 0 12px 32px rgba(30, 64, 175, 0.15);
       transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
@@ -227,7 +238,7 @@
       left: -100%;
       width: 100%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(11,31,58,0.1), transparent);
+      background: linear-gradient(90deg, transparent, var(--navy-soft), transparent);
       transition: left 0.5s ease;
     }
     .pill:hover::before {
@@ -235,8 +246,9 @@
     }
     .pill:hover {
       transform: translateY(-4px);
-      box-shadow: 0 16px 40px rgba(11, 31, 58, 0.18);
-      border-color: var(--navy);
+      box-shadow: 0 16px 40px rgba(30, 64, 175, 0.25);
+      border-color: var(--navy-bright);
+      background: linear-gradient(130deg, var(--navy-soft), var(--navy-light));
     }
     .pill .k {
       font-weight: 900;
@@ -253,6 +265,11 @@
       margin: 10px 0; 
       font-size: 16px;
       line-height: 1.6;
+      position: relative;
+      padding-left: 8px;
+    }
+    li::marker {
+      color: var(--navy);
     }
     .events {
       display: grid;
@@ -264,17 +281,18 @@
       .events { grid-template-columns: 1fr 1fr; }
     }
     .event {
-      border: 2px solid rgba(11,31,58,0.25);
+      border: 3px solid var(--navy);
       border-radius: 18px;
       padding: 20px 18px;
-      background: linear-gradient(150deg, rgba(11,31,58,0.10), rgba(11,31,58,0.03));
-      box-shadow: 0 12px 30px rgba(11,31,58,0.1);
+      background: linear-gradient(150deg, var(--navy-light), rgba(30, 64, 175, 0.05));
+      box-shadow: 0 12px 30px rgba(30, 64, 175, 0.15);
       transition: all 0.3s ease;
     }
     .event:hover {
       transform: translateY(-3px);
-      box-shadow: 0 16px 38px rgba(11,31,58,0.15);
-      border-color: var(--navy);
+      box-shadow: 0 16px 38px rgba(30, 64, 175, 0.25);
+      border-color: var(--navy-bright);
+      background: linear-gradient(150deg, var(--navy-soft), var(--navy-light));
     }
     .event .name {
       font-weight: 900;
@@ -292,9 +310,26 @@
       text-align: center;
       padding: 12px 0 4px;
     }
+    .event.compact {
+      padding: 16px 18px;
+    }
+    .event.compact .cta {
+      padding: 0;
+    }
+    .event.compact .name {
+      margin: 0 0 6px;
+    }
+    .event.compact .btn {
+      padding: 12px 24px;
+      margin: 0 0 6px;
+      font-size: 14px;
+    }
+    .event.compact .line {
+      margin: 0;
+    }
     .btn {
       display: inline-block;
-      background: var(--navy);
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-bright) 100%);
       color: #fff !important;
       text-decoration: none;
       font-weight: 900;
@@ -302,24 +337,26 @@
       padding: 16px 32px;
       margin: 8px 0 12px;
       letter-spacing: 0.04em;
-      box-shadow: 0 12px 28px rgba(11,31,58,0.25);
+      box-shadow: 0 12px 28px rgba(30, 64, 175, 0.35);
       transition: all 0.3s ease;
       font-size: 16px;
       text-transform: uppercase;
+      border: 2px solid var(--navy);
     }
     .btn:focus, .btn:hover {
-      background: rgba(11, 31, 58, 0.9);
+      background: linear-gradient(135deg, var(--navy-bright) 0%, var(--navy) 100%);
       transform: translateY(-2px);
-      box-shadow: 0 16px 36px rgba(11,31,58,0.3);
+      box-shadow: 0 16px 36px rgba(30, 64, 175, 0.4);
+      border-color: var(--navy-bright);
     }
     .footer {
       padding: 32px 24px 24px;
       text-align: center;
       color: var(--muted);
       font-size: 13px;
-      border-top: 2px solid var(--border);
+      border-top: 4px solid var(--navy);
       margin-top: 20px;
-      background: linear-gradient(180deg, transparent, rgba(11,31,58,0.02));
+      background: var(--navy-light);
     }
     code {
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -329,21 +366,18 @@
       border-radius: 8px;
     }
     .highlight-box {
-      background: linear-gradient(135deg, rgba(11,31,58,0.08) 0%, rgba(11,31,58,0.03) 100%);
-      border-left: 5px solid var(--navy);
+      background: linear-gradient(135deg, var(--navy-soft) 0%, var(--navy-light) 100%);
+      border: 3px solid var(--navy);
+      border-left: 8px solid var(--navy-bright);
       border-radius: 12px;
       padding: 20px 24px;
       margin: 24px 0;
-      box-shadow: 0 8px 20px rgba(11, 31, 58, 0.08);
+      box-shadow: 0 8px 20px rgba(30, 64, 175, 0.2);
     }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <!-- Top Banner -->
-    <img class="banner" src="assets/top-banner.jpg" alt="URB Consulting Winter 2026 Rush" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-    <div class="banner-placeholder" style="display:none;">URB Consulting Winter 2026 Rush</div>
-
     <div class="card">
       <div class="accent-line"></div>
 
@@ -355,13 +389,13 @@
         </div>
       </div>
 
+      <!-- Hero Photo -->
+      <img class="hero-photo" src="assets/hero-photo.jpg" alt="URB Consulting" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+      <div class="hero-photo-placeholder" style="display:none;">Hero Photo</div>
+
       <div class="content">
 
         <div class="section">
-          <!-- Section Header Image -->
-          <img class="section-header-img" src="assets/who-are-we.jpg" alt="Who Are We" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-          <div class="section-header-placeholder" style="display:none;">WHO ARE WE?</div>
-          
           <h2>Who Are We</h2>
           <p class="p">
             <strong>URB Consulting</strong> is the fastest-growing student-led consulting organization at the University of Michigan,
@@ -393,10 +427,6 @@
         </div>
 
         <div class="section">
-          <!-- Section Header Image -->
-          <img class="section-header-img" src="assets/what-we-do.jpg" alt="What We Do" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-          <div class="section-header-placeholder" style="display:none;">WHAT DO WE DO?</div>
-          
           <h2>What We Do</h2>
 
           <div class="grid">
@@ -418,18 +448,9 @@
             </div>
           </div>
 
-          <!-- Activities Image -->
-          <div style="margin-top: 32px;">
-            <img class="section-header-img" src="assets/activities.jpg" alt="URB Activities" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-            <div class="section-header-placeholder" style="display:none; margin-top: 32px;">URB ACTIVITIES</div>
-          </div>
         </div>
 
         <div class="section">
-          <!-- Section Header Image -->
-          <img class="section-header-img" src="assets/community.jpg" alt="The URB Community" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-          <div class="section-header-placeholder" style="display:none;">THE URB COMMUNITY</div>
-          
           <h2>The URB Community</h2>
           <p class="p">
             URB is more than a consulting club—it's a community professionally and socially. Members support one another through:
@@ -446,10 +467,6 @@
         </div>
 
         <div class="section">
-          <!-- Section Header Image -->
-          <img class="section-header-img" src="assets/meet-us.jpg" alt="Meet Us" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-          <div class="section-header-placeholder" style="display:none;">HOW DO I JOIN?</div>
-          
           <h2>Meet Us</h2>
           
           <div class="highlight-box">
@@ -459,7 +476,7 @@
           </div>
 
           <p class="p" style="margin-top: 24px;">
-            Come join us at our events to learn more about URB, hear what we do, and connect with our members:
+            Come join us at our events to learn more about URB, hear what we do, and connect with our members. We have 2 general meetings to accomodate for your schedule- you only need to attend one!
           </p>
 
           <div class="events">
@@ -484,13 +501,12 @@
               <p class="line">North Quad, Room 2255</p>
             </div>
 
-            <div class="event">
+            <div class="event compact">
               <p class="name">Can't make it?</p>
-              <p class="line">Join our email list to learn more and stay updated:</p>
               <div class="cta">
                 <a class="btn" href="https://forms.gle/AYjZfYS5bDP6kyKj6">Join the URB Email List</a>
               </div>
-              <p class="line" style="word-break:break-word;">
+              <p class="line" style="word-break:break-word; text-align: center; margin-top: 4px;">
                 <a href="https://forms.gle/AYjZfYS5bDP6kyKj6">https://forms.gle/AYjZfYS5bDP6kyKj6</a>
               </p>
             </div>
