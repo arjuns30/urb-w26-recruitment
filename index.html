@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/product-sans" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto+Condensed:wght@700&family=Montserrat:wght@900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
       --jungle-green: #2D5016;
@@ -41,33 +41,6 @@
       margin: 0 auto;
       padding: 0;
     }
-    .hero-photo {
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: 0;
-      max-height: 400px;
-    }
-    .hero-photo-placeholder {
-      width: 100%;
-      height: 300px;
-      background: var(--jungle-bg);
-      display: block;
-      text-align: center;
-      line-height: 300px;
-      color: var(--jungle-green);
-      font-weight: 900;
-      font-size: 20px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      border: 3px dashed var(--jungle-green);
-    }
-    .banner {
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: 0;
-    }
     .card {
       background: transparent;
       border: none;
@@ -85,31 +58,28 @@
       background: var(--jungle-bg);
       border-bottom: 4px solid var(--jungle-green);
     }
-    .logo {
-      display: block;
-      max-width: 160px;
-      width: 160px;
-      min-width: 120px;
-      height: auto;
-    }
     .hero-copy {
       display: block;
     }
     .title {
       margin: 0;
-      font-size: 32px;
-      letter-spacing: 0.06em;
+      font-size: 50px;
+      letter-spacing: 0.02em;
       text-transform: uppercase;
-      font-weight: 700;
-      font-family: "Oswald", "Roboto Condensed", "Montserrat", "Impact", "Arial Black", sans-serif;
+      font-weight: 900;
+      font-family: "Poppins", "Montserrat", "Arial Black", sans-serif;
       color: var(--orange);
-      text-align: left;
+      text-align: center;
+      line-height: 1.1;
+    }
+    .title .subtitle {
+      font-size: 36px;
     }
     .sub {
       margin: 0;
       color: var(--muted);
       font-size: 16px;
-      text-align: left;
+      text-align: center;
       letter-spacing: 0.02em;
     }
     .content {
@@ -128,35 +98,13 @@
       border-left-color: var(--jungle-green-light);
       border-right-color: var(--jungle-green-light);
     }
-    .section-header-img {
-      width: 100%;
-      max-width: 600px;
-      height: auto;
-      display: block;
-      margin: 0 auto 24px;
-    }
-    .section-header-placeholder {
-      width: 100%;
-      max-width: 600px;
-      height: 80px;
-      background: var(--jungle-green);
-      display: block;
-      text-align: center;
-      line-height: 80px;
-      color: white;
-      font-weight: 900;
-      font-size: 28px;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      margin: 0 auto 24px;
-    }
     .section h2 {
       margin: 0 0 20px;
       text-align: center;
       font-size: 32px;
-      font-weight: 700;
-      font-family: "Oswald", "Roboto Condensed", "Montserrat", "Impact", "Arial Black", sans-serif;
-      letter-spacing: 0.15em;
+      font-weight: 900;
+      font-family: "Poppins", "Montserrat", "Arial Black", sans-serif;
+      letter-spacing: 0.03em;
       text-transform: uppercase;
       color: var(--orange);
       padding: 0;
@@ -174,34 +122,7 @@
     .accent {
       color: var(--orange);
       font-weight: 900;
-      font-family: "Oswald", "Roboto Condensed", "Montserrat", "Impact", "Arial Black", sans-serif;
-    }
-    .image-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
-      margin: 24px 0;
-    }
-    .image-item {
-      width: 100%;
-      height: 200px;
-      overflow: hidden;
-    }
-    .image-item img {
-      width: 100%;
-      height: 100%;
-    }
-    .image-placeholder {
-      width: 100%;
-      height: 100%;
-      background: var(--jungle-bg);
-      display: block;
-      text-align: center;
-      line-height: 200px;
-      color: var(--jungle-green);
-      font-size: 14px;
-      font-weight: 600;
-      border: 2px dashed var(--jungle-green);
+      font-family: "Poppins", "Montserrat", "Arial Black", sans-serif;
     }
     .grid {
       display: grid;
@@ -218,11 +139,11 @@
       background: var(--jungle-bg);
     }
     .pill .k {
-      font-weight: 700;
-      font-family: "Oswald", "Roboto Condensed", "Montserrat", "Impact", "Arial Black", sans-serif;
+      font-weight: 800;
+      font-family: "Poppins", "Montserrat", "Arial Black", sans-serif;
       color: var(--orange);
       margin-bottom: 8px;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.01em;
       font-size: 18px;
     }
     ul {
@@ -254,12 +175,12 @@
       background: var(--jungle-bg);
     }
     .event .name {
-      font-weight: 700;
-      font-family: "Oswald", "Roboto Condensed", "Montserrat", "Impact", "Arial Black", sans-serif;
+      font-weight: 800;
+      font-family: "Poppins", "Montserrat", "Arial Black", sans-serif;
       color: var(--orange);
       margin: 0 0 10px;
       font-size: 20px;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.01em;
     }
     .event .line {
       margin: 6px 0;
@@ -331,16 +252,12 @@
       <div class="accent-line"></div>
 
       <div class="header">
-        <img class="logo" src="assets/urb-logo.png" alt="URB Consulting logo" />
         <div class="hero-copy">
-          <h1 class="title">URB Consulting Winter 2026 Recruitment</h1>
-          <p class="sub">University of Michigan • Tech Consulting • Community</p>
+            <h1 class="title">URB Consulting
+              <br/><span class="subtitle">Winter 2026 Recruitment</span></h1>
+          <p class="sub">Technology • Entrepreneurship • Community</p>
         </div>
       </div>
-
-      <!-- Hero Photo -->
-      <img class="hero-photo" src="assets/hero-photo.jpg" alt="URB Consulting" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-      <div class="hero-photo-placeholder" style="display:none;">Hero Photo</div>
 
       <div class="content">
 
@@ -357,22 +274,6 @@
             Through this work, URB members develop entrepreneurial, technical and business acumen while solving real-world problems for companies in
             <span class="accent">internship style projects</span> to build your resume!
           </p>
-          
-          <!-- Community/Network Image -->
-          <div class="image-grid">
-            <div class="image-item">
-              <img src="assets/community-1.jpg" alt="URB Community" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-              <div class="image-placeholder" style="display:none;">Community Photo 1</div>
-            </div>
-            <div class="image-item">
-              <img src="assets/community-2.jpg" alt="URB Network" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-              <div class="image-placeholder" style="display:none;">Community Photo 2</div>
-            </div>
-            <div class="image-item">
-              <img src="assets/community-3.jpg" alt="URB Activities" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-              <div class="image-placeholder" style="display:none;">Community Photo 3</div>
-            </div>
-          </div>
         </div>
 
         <div class="section">
@@ -474,11 +375,8 @@
 
       </div>
 
-      <!-- Bottom Banner -->
-      <img class="banner" src="assets/bottom-banner.jpg" alt="URB Consulting" onerror="this.style.display='none';" style="margin-top: 32px;" />
-
       <div class="footer">
-        <div class="small">For GitHub Pages: add your images at <code>assets/</code> folder</div>
+        <div class="small">URB Consulting • University of Michigan</div>
       </div>
     </div>
   </div>
