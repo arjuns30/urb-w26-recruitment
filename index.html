@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>URB Consulting Winter 2026 Recruitment</title>
+  <meta name="description" content="URB Consulting Winter 2026 Recruitment — University of Michigan" />
+  <style>
+    :root {
+      --navy: #0B1F3A;
+      --bg: #f5f7fb;
+      --text: #0f172a;
+      --muted: #334155;
+      --card: #ffffff;
+      --border: #e5e7eb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    a { color: var(--navy); text-decoration: underline; }
+    .wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 28px 16px 48px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+    }
+    .accent-line {
+      height: 5px;
+      background: var(--navy);
+      width: 100%;
+    }
+    .header {
+      padding: 28px 22px 18px;
+      border-bottom: 1px solid var(--border);
+      background:
+        radial-gradient(1200px 320px at 50% 0%, rgba(11,31,58,0.12), transparent 60%),
+        linear-gradient(180deg, rgba(11,31,58,0.07), rgba(11,31,58,0.00));
+      text-align: center;
+    }
+    .logo {
+      display: inline-block;
+      margin: 2px auto 14px;
+      max-width: 160px;
+      width: 44vw;
+      height: auto;
+    }
+    .title {
+      margin: 0;
+      font-size: 30px;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      font-weight: 900;
+      color: var(--navy);
+      text-align: center;
+    }
+    .sub {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
+    .content {
+      padding: 22px 22px 10px;
+    }
+    .section {
+      padding: 18px 18px 8px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      margin: 14px 0;
+      background: #fff;
+    }
+    .section h2 {
+      margin: 0 0 12px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: var(--navy);
+    }
+    .p { margin: 0 0 12px; color: var(--text); }
+    .muted { color: var(--muted); }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 10px;
+    }
+    @media (min-width: 720px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+    }
+    .pill {
+      border: 1px solid rgba(11,31,58,0.20);
+      border-left: 6px solid var(--navy);
+      border-radius: 14px;
+      padding: 12px 12px;
+      background: rgba(11,31,58,0.03);
+    }
+    .pill .k {
+      font-weight: 900;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+    ul {
+      margin: 8px 0 14px 20px;
+      padding: 0;
+    }
+    li { margin: 6px 0; }
+    .events {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 10px;
+    }
+    @media (min-width: 720px) {
+      .events { grid-template-columns: 1fr 1fr; }
+    }
+    .event {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 14px;
+      background: #fff;
+    }
+    .event .name {
+      font-weight: 900;
+      color: var(--navy);
+      margin: 0 0 6px;
+    }
+    .event .line {
+      margin: 0;
+      color: var(--muted);
+    }
+    .cta {
+      text-align: center;
+      padding: 8px 0 2px;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--navy);
+      color: #fff !important;
+      text-decoration: none;
+      font-weight: 900;
+      border-radius: 12px;
+      padding: 12px 16px;
+      margin: 6px 0 10px;
+    }
+    .btn:focus, .btn:hover {
+      filter: brightness(0.95);
+    }
+    .footer {
+      padding: 12px 22px 22px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 12px;
+      background: #f1f5f9;
+      padding: 2px 6px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="accent-line"></div>
+
+      <div class="header">
+        <!-- Put your URB logo file in the repo at: assets/urb-logo.png -->
+        <img class="logo" src="assets/urb-logo.png" alt="URB Consulting logo" />
+        <h1 class="title">URB Consulting Winter 2026 Recruitment</h1>
+        <p class="sub">University of Michigan • Pro-bono • Urban Technology</p>
+      </div>
+
+      <div class="content">
+
+        <div class="section">
+          <h2>Who Are We</h2>
+          <p class="p">
+            <strong>URB Consulting</strong> is the fastest-growing student-led consulting organization at the University of Michigan,
+            focused on companies at the intersection of the digital and physical worlds—any industry that impacts the built environment
+            including <strong>automotive, aviation, energy, architecture</strong> and so many more!
+          </p>
+          <p class="p">
+            We work with innovative startups, government agencies, and industry-leading tech companies to deliver high-impact projects spanning
+            <strong>technical implementation</strong>, <strong>design analysis</strong>, and <strong>strategic decision making</strong>.
+            Through this work, URB members develop entrepreneurial, technical and business acumen while solving real-world problems for companies in
+            <strong>internship style projects</strong> to build your resume!
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>What We Do</h2>
+
+          <div class="grid">
+            <div class="pill">
+              <div class="k">Market Research &amp; Entry</div>
+              <div class="muted">We identify unique business opportunities in new markets for companies deploying products in urban contexts.</div>
+            </div>
+            <div class="pill">
+              <div class="k">App &amp; Web Development</div>
+              <div class="muted">We turn ideas into reality by building well-designed, functional applications optimized for business needs.</div>
+            </div>
+            <div class="pill">
+              <div class="k">UI/UX Design Work</div>
+              <div class="muted">We create delightful, research-backed user experiences through customer interviews and goal-oriented design.</div>
+            </div>
+            <div class="pill">
+              <div class="k">Data Analytics</div>
+              <div class="muted">We help organizations uncover growth opportunities by translating complex data into actionable insights.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>The URB Community</h2>
+          <p class="p">
+            URB is more than a consulting club—it’s a community professionally and socially. Members support one another through:
+          </p>
+          <ul>
+            <li>Professional workshops and skills training</li>
+            <li>Treks to cities around the country</li>
+            <li>Mentorship and resume development</li>
+            <li>Collaborative project teams and social events</li>
+          </ul>
+          <p class="p">
+            Our members grow together, form close bonds, and gain hands-on experience that translates directly to immense personal and career growth.
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>Meet Us</h2>
+
+          <div class="events">
+            <div class="event">
+              <p class="name">Central Campus Winterfest</p>
+              <p class="line"><strong>Monday, January 12</strong></p>
+              <p class="line">4:00 PM – 7:00 PM</p>
+              <p class="line">Michigan Union • Rogel Ballroom, Table 9</p>
+            </div>
+
+            <div class="event">
+              <p class="name">General Meeting #1</p>
+              <p class="line"><strong>Thursday, January 15</strong></p>
+              <p class="line">6:00 PM – 8:00 PM</p>
+              <p class="line">North University Building, Room 1544</p>
+            </div>
+
+            <div class="event">
+              <p class="name">General Meeting #2</p>
+              <p class="line"><strong>Thursday, January 16</strong></p>
+              <p class="line">6:00 PM – 8:00 PM</p>
+              <p class="line">North Quad, Room 2255</p>
+            </div>
+
+            <div class="event">
+              <p class="name">Can’t make it?</p>
+              <p class="line">Join our email list to learn more and stay updated:</p>
+              <div class="cta">
+                <a class="btn" href="https://forms.gle/AYjZfYS5bDP6kyKj6">Join the URB Email List</a>
+              </div>
+              <p class="line" style="word-break:break-word;">
+                <a href="https://forms.gle/AYjZfYS5bDP6kyKj6">https://forms.gle/AYjZfYS5bDP6kyKj6</a>
+              </p>
+            </div>
+          </div>
+
+          <p class="p" style="margin-top:14px;">
+            If you have any questions, feel free to reply to this email—we’d love to chat.
+          </p>
+
+          <p class="p" style="margin:0;">
+            Best,<br/>
+            <strong>URB Consulting</strong><br/>
+            University of Michigan
+          </p>
+        </div>
+
+      </div>
+
+      <div class="footer">
+        <div class="small">For GitHub Pages: add your logo at <code>assets/urb-logo.png</code></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
