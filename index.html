@@ -31,7 +31,26 @@
     .wrap {
       max-width: 980px;
       margin: 0 auto;
-      padding: 32px 20px 64px;
+      padding: 0;
+    }
+    .banner {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0;
+    }
+    .banner-placeholder {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, var(--navy) 0%, rgba(11, 31, 58, 0.8) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 900;
+      font-size: 24px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
     }
     .card {
       background: transparent;
@@ -47,30 +66,34 @@
       border-radius: 99px;
     }
     .header {
-      padding: 28px 8px 10px;
+      padding: 32px 24px 24px;
       display: flex;
       align-items: center;
-      gap: 18px;
-      border-bottom: 1px solid var(--border);
-      background: linear-gradient(120deg, rgba(11,31,58,0.10) 0%, rgba(11,31,58,0.02) 100%);
+      gap: 20px;
+      background: linear-gradient(120deg, rgba(11,31,58,0.08) 0%, rgba(11,31,58,0.02) 100%);
+      border-bottom: 2px solid var(--border);
     }
     .logo {
       display: block;
-      max-width: 150px;
-      width: 26vw;
-      min-width: 110px;
+      max-width: 160px;
+      width: 28vw;
+      min-width: 120px;
       height: auto;
-      filter: drop-shadow(0 6px 18px rgba(11, 31, 58, 0.18));
+      filter: drop-shadow(0 8px 24px rgba(11, 31, 58, 0.25));
+      transition: transform 0.3s ease;
+    }
+    .logo:hover {
+      transform: scale(1.05);
     }
     .hero-copy {
       flex: 1;
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 8px;
     }
     .title {
       margin: 0;
-      font-size: clamp(28px, 3.2vw, 34px);
+      font-size: clamp(28px, 3.2vw, 36px);
       letter-spacing: 0.06em;
       text-transform: uppercase;
       font-weight: 900;
@@ -80,108 +103,194 @@
     .sub {
       margin: 0;
       color: var(--muted);
-      font-size: 15px;
+      font-size: 16px;
       text-align: left;
       letter-spacing: 0.02em;
     }
     .content {
-      padding: 18px 8px 10px;
+      padding: 0;
     }
     .section {
-      padding: 28px 6px 18px;
+      padding: 40px 24px 32px;
       border: none;
-      border-top: 1px solid var(--border);
       margin: 0;
+      position: relative;
     }
-    .section:first-of-type {
-      border-top: none;
-      padding-top: 22px;
+    .section:nth-child(even) {
+      background: linear-gradient(180deg, rgba(11,31,58,0.03) 0%, transparent 100%);
+    }
+    .section-header-img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      display: block;
+      margin: 0 auto 24px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(11, 31, 58, 0.15);
+    }
+    .section-header-placeholder {
+      width: 100%;
+      max-width: 600px;
+      height: 80px;
+      background: linear-gradient(135deg, var(--navy) 0%, rgba(11, 31, 58, 0.7) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 900;
+      font-size: 28px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin: 0 auto 24px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(11, 31, 58, 0.15);
     }
     .section h2 {
       position: relative;
-      margin: 0 0 14px;
-      text-align: left;
-      font-size: 22px;
+      margin: 0 0 20px;
+      text-align: center;
+      font-size: 32px;
       font-weight: 900;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
       color: var(--navy);
-      padding-left: 14px;
+      padding: 0;
     }
-    .section h2::before {
+    .section h2::after {
       content: "";
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 6px;
-      height: 22px;
-      background: var(--navy);
-      border-radius: 10px;
-      box-shadow: 0 0 0 6px rgba(11,31,58,0.08);
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, var(--navy), transparent);
+      margin: 12px auto 0;
+      border-radius: 2px;
     }
-    .p { margin: 0 0 12px; color: var(--text); }
+    .p { margin: 0 0 16px; color: var(--text); font-size: 16px; }
     .muted { color: var(--muted); }
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .image-item {
+      width: 100%;
+      height: 200px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(11, 31, 58, 0.12);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .image-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(11, 31, 58, 0.2);
+    }
+    .image-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .image-placeholder {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(11,31,58,0.15) 0%, rgba(11,31,58,0.05) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 600;
+    }
     .grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 14px;
-      margin-top: 14px;
+      gap: 18px;
+      margin-top: 24px;
     }
     @media (min-width: 720px) {
       .grid { grid-template-columns: 1fr 1fr; }
     }
     .pill {
-      border: 1px solid rgba(11,31,58,0.22);
-      border-radius: 16px;
-      padding: 14px 14px;
-      background: linear-gradient(130deg, rgba(11,31,58,0.10), rgba(11,31,58,0.03));
-      box-shadow: 0 12px 32px rgba(11, 31, 58, 0.08);
-      transition: transform 160ms ease, box-shadow 160ms ease;
+      border: 2px solid rgba(11,31,58,0.25);
+      border-radius: 18px;
+      padding: 20px 18px;
+      background: linear-gradient(130deg, rgba(11,31,58,0.12), rgba(11,31,58,0.04));
+      box-shadow: 0 12px 32px rgba(11, 31, 58, 0.1);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .pill::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(11,31,58,0.1), transparent);
+      transition: left 0.5s ease;
+    }
+    .pill:hover::before {
+      left: 100%;
     }
     .pill:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 14px 38px rgba(11, 31, 58, 0.12);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(11, 31, 58, 0.18);
+      border-color: var(--navy);
     }
     .pill .k {
       font-weight: 900;
       color: var(--navy);
-      margin-bottom: 6px;
+      margin-bottom: 8px;
       letter-spacing: 0.02em;
+      font-size: 18px;
     }
     ul {
-      margin: 8px 0 14px 20px;
+      margin: 12px 0 20px 24px;
       padding: 0;
     }
-    li { margin: 6px 0; }
+    li { 
+      margin: 10px 0; 
+      font-size: 16px;
+      line-height: 1.6;
+    }
     .events {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 14px;
-      margin-top: 12px;
+      gap: 18px;
+      margin-top: 24px;
     }
     @media (min-width: 720px) {
       .events { grid-template-columns: 1fr 1fr; }
     }
     .event {
-      border: 1px solid rgba(11,31,58,0.20);
-      border-radius: 16px;
-      padding: 14px 16px;
-      background: linear-gradient(150deg, rgba(11,31,58,0.08), rgba(11,31,58,0.02));
-      box-shadow: 0 12px 30px rgba(11,31,58,0.08);
+      border: 2px solid rgba(11,31,58,0.25);
+      border-radius: 18px;
+      padding: 20px 18px;
+      background: linear-gradient(150deg, rgba(11,31,58,0.10), rgba(11,31,58,0.03));
+      box-shadow: 0 12px 30px rgba(11,31,58,0.1);
+      transition: all 0.3s ease;
+    }
+    .event:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 38px rgba(11,31,58,0.15);
+      border-color: var(--navy);
     }
     .event .name {
       font-weight: 900;
       color: var(--navy);
-      margin: 0 0 6px;
+      margin: 0 0 10px;
+      font-size: 20px;
+      letter-spacing: 0.02em;
     }
     .event .line {
-      margin: 0;
+      margin: 6px 0;
       color: var(--muted);
+      font-size: 15px;
     }
     .cta {
       text-align: center;
-      padding: 8px 0 2px;
+      padding: 12px 0 4px;
     }
     .btn {
       display: inline-block;
@@ -189,23 +298,28 @@
       color: #fff !important;
       text-decoration: none;
       font-weight: 900;
-      border-radius: 12px;
-      padding: 12px 16px;
-      margin: 6px 0 10px;
-      letter-spacing: 0.02em;
-      box-shadow: 0 12px 28px rgba(11,31,58,0.18);
+      border-radius: 14px;
+      padding: 16px 32px;
+      margin: 8px 0 12px;
+      letter-spacing: 0.04em;
+      box-shadow: 0 12px 28px rgba(11,31,58,0.25);
+      transition: all 0.3s ease;
+      font-size: 16px;
+      text-transform: uppercase;
     }
     .btn:focus, .btn:hover {
-      filter: brightness(1.02);
-      transform: translateY(-1px);
+      background: rgba(11, 31, 58, 0.9);
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px rgba(11,31,58,0.3);
     }
     .footer {
-      padding: 18px 8px 8px;
+      padding: 32px 24px 24px;
       text-align: center;
       color: var(--muted);
       font-size: 13px;
-      border-top: 1px solid var(--border);
+      border-top: 2px solid var(--border);
       margin-top: 20px;
+      background: linear-gradient(180deg, transparent, rgba(11,31,58,0.02));
     }
     code {
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -214,15 +328,26 @@
       padding: 2px 6px;
       border-radius: 8px;
     }
+    .highlight-box {
+      background: linear-gradient(135deg, rgba(11,31,58,0.08) 0%, rgba(11,31,58,0.03) 100%);
+      border-left: 5px solid var(--navy);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 24px 0;
+      box-shadow: 0 8px 20px rgba(11, 31, 58, 0.08);
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
+    <!-- Top Banner -->
+    <img class="banner" src="assets/top-banner.jpg" alt="URB Consulting Winter 2026 Rush" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+    <div class="banner-placeholder" style="display:none;">URB Consulting Winter 2026 Rush</div>
+
     <div class="card">
       <div class="accent-line"></div>
 
       <div class="header">
-        <!-- Put your URB logo file in the repo at: assets/urb-logo.png -->
         <img class="logo" src="assets/urb-logo.png" alt="URB Consulting logo" />
         <div class="hero-copy">
           <h1 class="title">URB Consulting Winter 2026 Recruitment</h1>
@@ -233,6 +358,10 @@
       <div class="content">
 
         <div class="section">
+          <!-- Section Header Image -->
+          <img class="section-header-img" src="assets/who-are-we.jpg" alt="Who Are We" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="section-header-placeholder" style="display:none;">WHO ARE WE?</div>
+          
           <h2>Who Are We</h2>
           <p class="p">
             <strong>URB Consulting</strong> is the fastest-growing student-led consulting organization at the University of Michigan,
@@ -245,9 +374,29 @@
             Through this work, URB members develop entrepreneurial, technical and business acumen while solving real-world problems for companies in
             <strong>internship style projects</strong> to build your resume!
           </p>
+          
+          <!-- Community/Network Image -->
+          <div class="image-grid">
+            <div class="image-item">
+              <img src="assets/community-1.jpg" alt="URB Community" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+              <div class="image-placeholder" style="display:none;">Community Photo 1</div>
+            </div>
+            <div class="image-item">
+              <img src="assets/community-2.jpg" alt="URB Network" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+              <div class="image-placeholder" style="display:none;">Community Photo 2</div>
+            </div>
+            <div class="image-item">
+              <img src="assets/community-3.jpg" alt="URB Activities" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+              <div class="image-placeholder" style="display:none;">Community Photo 3</div>
+            </div>
+          </div>
         </div>
 
         <div class="section">
+          <!-- Section Header Image -->
+          <img class="section-header-img" src="assets/what-we-do.jpg" alt="What We Do" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="section-header-placeholder" style="display:none;">WHAT DO WE DO?</div>
+          
           <h2>What We Do</h2>
 
           <div class="grid">
@@ -268,12 +417,22 @@
               <div class="muted">We help organizations uncover growth opportunities by translating complex data into actionable insights.</div>
             </div>
           </div>
+
+          <!-- Activities Image -->
+          <div style="margin-top: 32px;">
+            <img class="section-header-img" src="assets/activities.jpg" alt="URB Activities" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="section-header-placeholder" style="display:none; margin-top: 32px;">URB ACTIVITIES</div>
+          </div>
         </div>
 
         <div class="section">
+          <!-- Section Header Image -->
+          <img class="section-header-img" src="assets/community.jpg" alt="The URB Community" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="section-header-placeholder" style="display:none;">THE URB COMMUNITY</div>
+          
           <h2>The URB Community</h2>
           <p class="p">
-            URB is more than a consulting club—it’s a community professionally and socially. Members support one another through:
+            URB is more than a consulting club—it's a community professionally and socially. Members support one another through:
           </p>
           <ul>
             <li>Professional workshops and skills training</li>
@@ -287,7 +446,21 @@
         </div>
 
         <div class="section">
+          <!-- Section Header Image -->
+          <img class="section-header-img" src="assets/meet-us.jpg" alt="Meet Us" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="section-header-placeholder" style="display:none;">HOW DO I JOIN?</div>
+          
           <h2>Meet Us</h2>
+          
+          <div class="highlight-box">
+            <p class="p" style="margin:0; font-size: 18px; font-weight: 600; color: var(--navy);">
+              If you have an interest in technology and consulting, we would love to meet you! We welcome and encourage rushees from every discipline, no matter your major or experience level.
+            </p>
+          </div>
+
+          <p class="p" style="margin-top: 24px;">
+            Come join us at our events to learn more about URB, hear what we do, and connect with our members:
+          </p>
 
           <div class="events">
             <div class="event">
@@ -312,7 +485,7 @@
             </div>
 
             <div class="event">
-              <p class="name">Can’t make it?</p>
+              <p class="name">Can't make it?</p>
               <p class="line">Join our email list to learn more and stay updated:</p>
               <div class="cta">
                 <a class="btn" href="https://forms.gle/AYjZfYS5bDP6kyKj6">Join the URB Email List</a>
@@ -323,8 +496,8 @@
             </div>
           </div>
 
-          <p class="p" style="margin-top:14px;">
-            If you have any questions, feel free to reply to this email—we’d love to chat.
+          <p class="p" style="margin-top:24px;">
+            If you have any questions, feel free to reply to this email—we'd love to chat.
           </p>
 
           <p class="p" style="margin:0;">
@@ -336,8 +509,11 @@
 
       </div>
 
+      <!-- Bottom Banner -->
+      <img class="banner" src="assets/bottom-banner.jpg" alt="URB Consulting" onerror="this.style.display='none';" style="margin-top: 32px;" />
+
       <div class="footer">
-        <div class="small">For GitHub Pages: add your logo at <code>assets/urb-logo.png</code></div>
+        <div class="small">For GitHub Pages: add your images at <code>assets/</code> folder</div>
       </div>
     </div>
   </div>
