@@ -5,112 +5,149 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>URB Consulting Winter 2026 Recruitment</title>
   <meta name="description" content="URB Consulting Winter 2026 Recruitment — University of Michigan" />
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/product-sans" />
   <style>
     :root {
       --navy: #0B1F3A;
-      --bg: #f5f7fb;
+      --navy-soft: rgba(11, 31, 58, 0.12);
+      --bg: #f4f7fc;
       --text: #0f172a;
-      --muted: #334155;
+      --muted: #4b5563;
       --card: #ffffff;
-      --border: #e5e7eb;
+      --border: rgba(11, 31, 58, 0.14);
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, Helvetica, sans-serif;
-      background: var(--bg);
+      font-family: "Product Sans", "Google Sans", "Inter", "Helvetica Neue", Arial, sans-serif;
+      background:
+        radial-gradient(1200px 380px at 10% 10%, rgba(11, 31, 58, 0.10), transparent 60%),
+        radial-gradient(900px 260px at 90% 18%, rgba(11, 31, 58, 0.12), transparent 55%),
+        var(--bg);
       color: var(--text);
       line-height: 1.55;
     }
     a { color: var(--navy); text-decoration: underline; }
     .wrap {
-      max-width: 860px;
+      max-width: 980px;
       margin: 0 auto;
-      padding: 28px 16px 48px;
+      padding: 32px 20px 64px;
     }
     .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
+      background: transparent;
+      border: none;
+      border-radius: 0;
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      box-shadow: none;
     }
     .accent-line {
-      height: 5px;
-      background: var(--navy);
+      height: 6px;
+      background: linear-gradient(90deg, var(--navy), rgba(11,31,58,0.12));
       width: 100%;
+      border-radius: 99px;
     }
     .header {
-      padding: 28px 22px 18px;
+      padding: 28px 8px 10px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
       border-bottom: 1px solid var(--border);
-      background:
-        radial-gradient(1200px 320px at 50% 0%, rgba(11,31,58,0.12), transparent 60%),
-        linear-gradient(180deg, rgba(11,31,58,0.07), rgba(11,31,58,0.00));
-      text-align: center;
+      background: linear-gradient(120deg, rgba(11,31,58,0.10) 0%, rgba(11,31,58,0.02) 100%);
     }
     .logo {
-      display: inline-block;
-      margin: 2px auto 14px;
-      max-width: 160px;
-      width: 44vw;
+      display: block;
+      max-width: 150px;
+      width: 26vw;
+      min-width: 110px;
       height: auto;
+      filter: drop-shadow(0 6px 18px rgba(11, 31, 58, 0.18));
+    }
+    .hero-copy {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
     }
     .title {
       margin: 0;
-      font-size: 30px;
-      letter-spacing: 0.8px;
+      font-size: clamp(28px, 3.2vw, 34px);
+      letter-spacing: 0.06em;
       text-transform: uppercase;
       font-weight: 900;
       color: var(--navy);
-      text-align: center;
+      text-align: left;
     }
     .sub {
-      margin: 10px 0 0;
+      margin: 0;
       color: var(--muted);
-      font-size: 14px;
-      text-align: center;
+      font-size: 15px;
+      text-align: left;
+      letter-spacing: 0.02em;
     }
     .content {
-      padding: 22px 22px 10px;
+      padding: 18px 8px 10px;
     }
     .section {
-      padding: 18px 18px 8px;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      margin: 14px 0;
-      background: #fff;
+      padding: 28px 6px 18px;
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 0;
+    }
+    .section:first-of-type {
+      border-top: none;
+      padding-top: 22px;
     }
     .section h2 {
-      margin: 0 0 12px;
-      text-align: center;
-      font-size: 20px;
+      position: relative;
+      margin: 0 0 14px;
+      text-align: left;
+      font-size: 22px;
       font-weight: 900;
-      letter-spacing: 0.10em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--navy);
+      padding-left: 14px;
+    }
+    .section h2::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 22px;
+      background: var(--navy);
+      border-radius: 10px;
+      box-shadow: 0 0 0 6px rgba(11,31,58,0.08);
     }
     .p { margin: 0 0 12px; color: var(--text); }
     .muted { color: var(--muted); }
     .grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 12px;
-      margin-top: 10px;
+      gap: 14px;
+      margin-top: 14px;
     }
     @media (min-width: 720px) {
       .grid { grid-template-columns: 1fr 1fr; }
     }
     .pill {
-      border: 1px solid rgba(11,31,58,0.20);
-      border-left: 6px solid var(--navy);
-      border-radius: 14px;
-      padding: 12px 12px;
-      background: rgba(11,31,58,0.03);
+      border: 1px solid rgba(11,31,58,0.22);
+      border-radius: 16px;
+      padding: 14px 14px;
+      background: linear-gradient(130deg, rgba(11,31,58,0.10), rgba(11,31,58,0.03));
+      box-shadow: 0 12px 32px rgba(11, 31, 58, 0.08);
+      transition: transform 160ms ease, box-shadow 160ms ease;
+    }
+    .pill:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 38px rgba(11, 31, 58, 0.12);
     }
     .pill .k {
       font-weight: 900;
       color: var(--navy);
-      margin-bottom: 4px;
+      margin-bottom: 6px;
+      letter-spacing: 0.02em;
     }
     ul {
       margin: 8px 0 14px 20px;
@@ -120,17 +157,18 @@
     .events {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 12px;
-      margin-top: 10px;
+      gap: 14px;
+      margin-top: 12px;
     }
     @media (min-width: 720px) {
       .events { grid-template-columns: 1fr 1fr; }
     }
     .event {
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 14px 14px;
-      background: #fff;
+      border: 1px solid rgba(11,31,58,0.20);
+      border-radius: 16px;
+      padding: 14px 16px;
+      background: linear-gradient(150deg, rgba(11,31,58,0.08), rgba(11,31,58,0.02));
+      box-shadow: 0 12px 30px rgba(11,31,58,0.08);
     }
     .event .name {
       font-weight: 900;
@@ -154,15 +192,20 @@
       border-radius: 12px;
       padding: 12px 16px;
       margin: 6px 0 10px;
+      letter-spacing: 0.02em;
+      box-shadow: 0 12px 28px rgba(11,31,58,0.18);
     }
     .btn:focus, .btn:hover {
-      filter: brightness(0.95);
+      filter: brightness(1.02);
+      transform: translateY(-1px);
     }
     .footer {
-      padding: 12px 22px 22px;
+      padding: 18px 8px 8px;
       text-align: center;
       color: var(--muted);
       font-size: 13px;
+      border-top: 1px solid var(--border);
+      margin-top: 20px;
     }
     code {
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -181,8 +224,10 @@
       <div class="header">
         <!-- Put your URB logo file in the repo at: assets/urb-logo.png -->
         <img class="logo" src="assets/urb-logo.png" alt="URB Consulting logo" />
-        <h1 class="title">URB Consulting Winter 2026 Recruitment</h1>
-        <p class="sub">University of Michigan • Tech Consulting • Community</p>
+        <div class="hero-copy">
+          <h1 class="title">URB Consulting Winter 2026 Recruitment</h1>
+          <p class="sub">University of Michigan • Tech Consulting • Community</p>
+        </div>
       </div>
 
       <div class="content">
