@@ -6,17 +6,26 @@
   <title>URB Consulting Winter 2026 Recruitment</title>
   <meta name="description" content="URB Consulting Winter 2026 Recruitment — University of Michigan" />
   <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/product-sans" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto+Condensed:wght@700&family=Montserrat:wght@900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --navy: #1E40AF;
-      --navy-bright: #3B82F6;
-      --navy-soft: rgba(30, 64, 175, 0.15);
-      --navy-light: rgba(30, 64, 175, 0.08);
+      --jungle-green: #2D5016;
+      --jungle-green-bright: #4A7C2A;
+      --jungle-green-light: #6BA644;
+      --jungle-soft: rgba(45, 80, 22, 0.15);
+      --jungle-lighter: rgba(107, 166, 68, 0.12);
+      --jungle-bg: rgba(107, 166, 68, 0.05);
+      --orange: #FF6B35;
+      --orange-bright: #FF8C42;
+      --gold: #F4A261;
+      --gold-light: #FFD166;
       --bg: #ffffff;
       --text: #0f172a;
       --muted: #4b5563;
       --card: #ffffff;
-      --border: rgba(30, 64, 175, 0.25);
+      --border: rgba(45, 80, 22, 0.25);
     }
     * { box-sizing: border-box; }
     body {
@@ -26,7 +35,7 @@
       color: var(--text);
       line-height: 1.55;
     }
-    a { color: var(--navy); text-decoration: underline; }
+    a { color: var(--jungle-green); text-decoration: underline; }
     .wrap {
       max-width: 980px;
       margin: 0 auto;
@@ -38,21 +47,20 @@
       display: block;
       margin: 0;
       max-height: 400px;
-      object-fit: cover;
     }
     .hero-photo-placeholder {
       width: 100%;
       height: 300px;
-      background: linear-gradient(135deg, var(--navy-soft) 0%, var(--navy-light) 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--navy);
+      background: var(--jungle-bg);
+      display: block;
+      text-align: center;
+      line-height: 300px;
+      color: var(--jungle-green);
       font-weight: 900;
       font-size: 20px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      border: 3px dashed var(--navy);
+      border: 3px dashed var(--jungle-green);
     }
     .banner {
       width: 100%;
@@ -69,43 +77,32 @@
     }
     .accent-line {
       height: 8px;
-      background: linear-gradient(90deg, var(--navy), var(--navy-bright));
+      background: var(--jungle-green);
       width: 100%;
-      border-radius: 0;
     }
     .header {
       padding: 32px 24px 24px;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      background: var(--navy-light);
-      border-bottom: 4px solid var(--navy);
+      background: var(--jungle-bg);
+      border-bottom: 4px solid var(--jungle-green);
     }
     .logo {
       display: block;
       max-width: 160px;
-      width: 28vw;
+      width: 160px;
       min-width: 120px;
       height: auto;
-      filter: drop-shadow(0 8px 24px rgba(30, 64, 175, 0.3));
-      transition: transform 0.3s ease;
-    }
-    .logo:hover {
-      transform: scale(1.05);
     }
     .hero-copy {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
+      display: block;
     }
     .title {
       margin: 0;
-      font-size: clamp(28px, 3.2vw, 36px);
+      font-size: 32px;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      font-weight: 900;
-      color: var(--navy);
+      font-weight: 700;
+      font-family: "Oswald", "Roboto Condensed", "Montserrat", "Impact", "Arial Black", sans-serif;
+      color: var(--orange);
       text-align: left;
     }
     .sub {
@@ -123,11 +120,13 @@
       border: none;
       margin: 0;
       position: relative;
-      border-left: 5px solid var(--navy);
+      border-left: 5px solid var(--jungle-green);
+      border-right: 5px solid var(--jungle-green);
     }
     .section:nth-child(even) {
-      background: var(--navy-light);
-      border-left-color: var(--navy-bright);
+      background: var(--jungle-bg);
+      border-left-color: var(--jungle-green-light);
+      border-right-color: var(--jungle-green-light);
     }
     .section-header-img {
       width: 100%;
@@ -135,48 +134,48 @@
       height: auto;
       display: block;
       margin: 0 auto 24px;
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(30, 64, 175, 0.25);
     }
     .section-header-placeholder {
       width: 100%;
       max-width: 600px;
       height: 80px;
-      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-bright) 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background: var(--jungle-green);
+      display: block;
+      text-align: center;
+      line-height: 80px;
       color: white;
       font-weight: 900;
       font-size: 28px;
       letter-spacing: 0.15em;
       text-transform: uppercase;
       margin: 0 auto 24px;
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(30, 64, 175, 0.25);
     }
     .section h2 {
-      position: relative;
       margin: 0 0 20px;
       text-align: center;
       font-size: 32px;
-      font-weight: 900;
+      font-weight: 700;
+      font-family: "Oswald", "Roboto Condensed", "Montserrat", "Impact", "Arial Black", sans-serif;
       letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: var(--navy);
+      color: var(--orange);
       padding: 0;
     }
     .section h2::after {
       content: "";
       display: block;
-      width: 120px;
+      width: 100%;
       height: 5px;
-      background: linear-gradient(90deg, transparent, var(--navy), var(--navy-bright), var(--navy), transparent);
-      margin: 12px auto 0;
-      border-radius: 3px;
+      background: var(--jungle-green);
+      margin: 12px 0 0;
     }
     .p { margin: 0 0 16px; color: var(--text); font-size: 16px; }
     .muted { color: var(--muted); }
+    .accent {
+      color: var(--orange);
+      font-weight: 900;
+      font-family: "Oswald", "Roboto Condensed", "Montserrat", "Impact", "Arial Black", sans-serif;
+    }
     .image-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -186,31 +185,23 @@
     .image-item {
       width: 100%;
       height: 200px;
-      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 8px 20px rgba(30, 64, 175, 0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .image-item:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 28px rgba(30, 64, 175, 0.3);
     }
     .image-item img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
     }
     .image-placeholder {
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, var(--navy-soft) 0%, var(--navy-light) 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--navy);
+      background: var(--jungle-bg);
+      display: block;
+      text-align: center;
+      line-height: 200px;
+      color: var(--jungle-green);
       font-size: 14px;
       font-weight: 600;
-      border: 2px dashed var(--navy);
+      border: 2px dashed var(--jungle-green);
     }
     .grid {
       display: grid;
@@ -222,37 +213,14 @@
       .grid { grid-template-columns: 1fr 1fr; }
     }
     .pill {
-      border: 3px solid var(--navy);
-      border-radius: 18px;
+      border: 3px solid var(--jungle-green);
       padding: 20px 18px;
-      background: linear-gradient(130deg, var(--navy-light), rgba(30, 64, 175, 0.05));
-      box-shadow: 0 12px 32px rgba(30, 64, 175, 0.15);
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    .pill::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, var(--navy-soft), transparent);
-      transition: left 0.5s ease;
-    }
-    .pill:hover::before {
-      left: 100%;
-    }
-    .pill:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 40px rgba(30, 64, 175, 0.25);
-      border-color: var(--navy-bright);
-      background: linear-gradient(130deg, var(--navy-soft), var(--navy-light));
+      background: var(--jungle-bg);
     }
     .pill .k {
-      font-weight: 900;
-      color: var(--navy);
+      font-weight: 700;
+      font-family: "Oswald", "Roboto Condensed", "Montserrat", "Impact", "Arial Black", sans-serif;
+      color: var(--orange);
       margin-bottom: 8px;
       letter-spacing: 0.02em;
       font-size: 18px;
@@ -269,7 +237,7 @@
       padding-left: 8px;
     }
     li::marker {
-      color: var(--navy);
+      color: var(--jungle-green);
     }
     .events {
       display: grid;
@@ -281,22 +249,14 @@
       .events { grid-template-columns: 1fr 1fr; }
     }
     .event {
-      border: 3px solid var(--navy);
-      border-radius: 18px;
+      border: 3px solid var(--jungle-green);
       padding: 20px 18px;
-      background: linear-gradient(150deg, var(--navy-light), rgba(30, 64, 175, 0.05));
-      box-shadow: 0 12px 30px rgba(30, 64, 175, 0.15);
-      transition: all 0.3s ease;
-    }
-    .event:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 16px 38px rgba(30, 64, 175, 0.25);
-      border-color: var(--navy-bright);
-      background: linear-gradient(150deg, var(--navy-soft), var(--navy-light));
+      background: var(--jungle-bg);
     }
     .event .name {
-      font-weight: 900;
-      color: var(--navy);
+      font-weight: 700;
+      font-family: "Oswald", "Roboto Condensed", "Montserrat", "Impact", "Arial Black", sans-serif;
+      color: var(--orange);
       margin: 0 0 10px;
       font-size: 20px;
       letter-spacing: 0.02em;
@@ -329,34 +289,25 @@
     }
     .btn {
       display: inline-block;
-      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-bright) 100%);
+      background: var(--jungle-green);
       color: #fff !important;
       text-decoration: none;
       font-weight: 900;
-      border-radius: 14px;
       padding: 16px 32px;
       margin: 8px 0 12px;
       letter-spacing: 0.04em;
-      box-shadow: 0 12px 28px rgba(30, 64, 175, 0.35);
-      transition: all 0.3s ease;
       font-size: 16px;
       text-transform: uppercase;
-      border: 2px solid var(--navy);
-    }
-    .btn:focus, .btn:hover {
-      background: linear-gradient(135deg, var(--navy-bright) 0%, var(--navy) 100%);
-      transform: translateY(-2px);
-      box-shadow: 0 16px 36px rgba(30, 64, 175, 0.4);
-      border-color: var(--navy-bright);
+      border: 2px solid var(--jungle-green);
     }
     .footer {
       padding: 32px 24px 24px;
       text-align: center;
       color: var(--muted);
       font-size: 13px;
-      border-top: 4px solid var(--navy);
+      border-top: 4px solid var(--jungle-green);
       margin-top: 20px;
-      background: var(--navy-light);
+      background: var(--jungle-bg);
     }
     code {
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -366,13 +317,11 @@
       border-radius: 8px;
     }
     .highlight-box {
-      background: linear-gradient(135deg, var(--navy-soft) 0%, var(--navy-light) 100%);
-      border: 3px solid var(--navy);
-      border-left: 8px solid var(--navy-bright);
-      border-radius: 12px;
+      background: var(--jungle-bg);
+      border: 3px solid var(--jungle-green);
+      border-left: 8px solid var(--gold);
       padding: 20px 24px;
       margin: 24px 0;
-      box-shadow: 0 8px 20px rgba(30, 64, 175, 0.2);
     }
   </style>
 </head>
@@ -398,15 +347,15 @@
         <div class="section">
           <h2>Who Are We</h2>
           <p class="p">
-            <strong>URB Consulting</strong> is the fastest-growing student-led consulting organization at the University of Michigan,
-            focused on companies at the intersection of the digital and physical worlds—any industry that impacts the built environment
-            including <strong>automotive, aviation, energy, architecture</strong> and so many more!
+            <strong>URB Consulting</strong> is the <span class="accent">fastest-growing</span> student-led consulting organization at the University of Michigan,
+            focused on companies at the intersection of the <span class="accent">digital and physical worlds</span>—any industry that impacts the built environment
+            including automotive, aviation, energy, architecture and so many more!
           </p>
           <p class="p">
             We work with innovative startups, government agencies, and industry-leading tech companies to deliver high-impact projects spanning
-            <strong>technical implementation</strong>, <strong>design analysis</strong>, and <strong>strategic decision making</strong>.
+            technical implementation, design analysis, and strategic decision making.
             Through this work, URB members develop entrepreneurial, technical and business acumen while solving real-world problems for companies in
-            <strong>internship style projects</strong> to build your resume!
+            <span class="accent">internship style projects</span> to build your resume!
           </p>
           
           <!-- Community/Network Image -->
@@ -453,7 +402,7 @@
         <div class="section">
           <h2>The URB Community</h2>
           <p class="p">
-            URB is more than a consulting club—it's a community professionally and socially. Members support one another through:
+            URB is more than a consulting club- it's a <span class="accent">community</span> professionally and socially. Members support one another through:
           </p>
           <ul>
             <li>Professional workshops and skills training</li>
@@ -462,7 +411,7 @@
             <li>Collaborative project teams and social events</li>
           </ul>
           <p class="p">
-            Our members grow together, form close bonds, and gain hands-on experience that translates directly to immense personal and career growth.
+            Our members grow together, form close bonds, and gain <span class="accent">hands-on experience</span> that translates directly to immense personal and career growth.
           </p>
         </div>
 
@@ -470,13 +419,13 @@
           <h2>Meet Us</h2>
           
           <div class="highlight-box">
-            <p class="p" style="margin:0; font-size: 18px; font-weight: 600; color: var(--navy);">
-              If you have an interest in technology and consulting, we would love to meet you! We welcome and encourage rushees from every discipline, no matter your major or experience level.
+            <p class="p" style="margin:0; font-size: 18px; font-weight: 600; color: var(--jungle-green);">
+              If you have an interest in technology and consulting, we would love to meet you! We welcome and encourage rushees from <span class="accent">every discipline</span>, no matter your major or experience level.
             </p>
           </div>
 
           <p class="p" style="margin-top: 24px;">
-            Come join us at our events to learn more about URB, hear what we do, and connect with our members. We have 2 general meetings to accomodate for your schedule- you only need to attend one!
+            Come join us at our events to learn more about URB, hear what we do, and connect with our members. We have <span class="accent">2 general meetings</span> to accomodate for your schedule- you only need to attend one!
           </p>
 
           <div class="events">
@@ -504,10 +453,10 @@
             <div class="event compact">
               <p class="name">Can't make it?</p>
               <div class="cta">
-                <a class="btn" href="https://forms.gle/AYjZfYS5bDP6kyKj6">Join the URB Email List</a>
+                <a class="btn" href="https://forms.gle/B1nLNCLJ2bvwA3988">Join the URB Email List</a>
               </div>
               <p class="line" style="word-break:break-word; text-align: center; margin-top: 4px;">
-                <a href="https://forms.gle/AYjZfYS5bDP6kyKj6">https://forms.gle/AYjZfYS5bDP6kyKj6</a>
+                <a href="https://forms.gle/B1nLNCLJ2bvwA3988">https://forms.gle/B1nLNCLJ2bvwA3988</a>
               </p>
             </div>
           </div>
