@@ -8,24 +8,34 @@
   <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/product-sans" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@700;800;900&family=Inter:wght@800;900&family=Crimson+Pro:wght@700&family=Lora:wght@700&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
   <style>
     :root {
       --jungle-green: #2D5016;
       --jungle-green-bright: #4A7C2A;
-      --jungle-green-light: #6BA644;
-      --jungle-soft: rgba(45, 80, 22, 0.15);
-      --jungle-lighter: rgba(107, 166, 68, 0.12);
-      --jungle-bg: rgba(107, 166, 68, 0.05);
+      --jungle-green-light: #6BA844;
+      --jungle-green-soft: rgba(45, 80, 22, 0.15);
+      --jungle-green-lighter: rgba(74, 124, 42, 0.12);
+      --jungle-green-bg: #3D6B1F;
+      --jungle-green-bg-light: #4A7C2A;
+      --jungle-green-secondary: #3D6B1F;
+      --jungle-green-secondary-light: #4A7C2A;
+      --jungle-green-secondary-soft: rgba(61, 107, 31, 0.20);
       --orange: #FF6B35;
-      --orange-bright: #FF8C42;
-      --gold: #F4A261;
-      --gold-light: #FFD166;
+      --orange-bright: #FF8C5A;
+      --orange-light: #FFB085;
+      --orange-soft: rgba(255, 107, 53, 0.15);
+      --orange-lighter: rgba(255, 140, 90, 0.12);
+      --peach: #FF6B35;
+      --peach-bright: #FF8C5A;
+      --peach-light: #FFB085;
+      --gold: #FF6B35;
+      --gold-light: #FF8C5A;
       --bg: #ffffff;
       --text: #0f172a;
       --muted: #4b5563;
       --card: #ffffff;
-      --border: rgba(45, 80, 22, 0.25);
+      --border: rgba(61, 107, 31, 0.25);
     }
     * { box-sizing: border-box; }
     body {
@@ -35,7 +45,7 @@
       color: var(--text);
       line-height: 1.55;
     }
-    a { color: var(--jungle-green); text-decoration: underline; }
+    a { color: var(--peach); text-decoration: underline; }
     .wrap {
       max-width: 980px;
       margin: 0 auto;
@@ -50,63 +60,92 @@
     }
     .accent-line {
       height: 8px;
-      background: var(--jungle-green);
+      background: linear-gradient(to right, var(--jungle-green-secondary), var(--orange));
       width: 100%;
     }
     .header {
-      padding: 32px 24px 24px;
-      background: var(--jungle-bg);
-      border-bottom: 4px solid var(--jungle-green);
+      padding: 32px 48px 24px;
+      background: var(--jungle-green-secondary-soft);
+      border-bottom: 4px solid var(--jungle-green-secondary);
+      max-width: 750px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .header-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 24px;
     }
     .hero-copy {
+      flex: 1;
+    }
+    .header-logo {
+      flex-shrink: 0;
+      width: 120px;
+      height: auto;
+    }
+    .header-logo img {
+      width: 100%;
+      height: auto;
       display: block;
+    }
+    @media (max-width: 720px) {
+      .header-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .header-logo {
+        width: 100px;
+      }
     }
     .title {
       margin: 0;
-      font-size: 50px;
+      font-size: 46px;
       letter-spacing: 0.02em;
       text-transform: uppercase;
       font-weight: 900;
-      font-family: "Poppins", "Montserrat", "Arial Black", sans-serif;
-      color: var(--orange);
-      text-align: center;
+      font-family: "Merriweather", "Georgia", "Times New Roman", serif;
+      color: var(--jungle-green-secondary);
+      text-align: left;
       line-height: 1.1;
     }
     .title .subtitle {
-      font-size: 36px;
+      font-size: 33px;
     }
     .sub {
       margin: 0;
       color: var(--muted);
       font-size: 16px;
-      text-align: center;
+      text-align: left;
       letter-spacing: 0.02em;
     }
     .content {
       padding: 0;
+      max-width: 750px;
+      margin: 0 auto;
     }
     .section {
-      padding: 40px 24px 32px;
+      padding: 40px 48px 32px;
       border: none;
       margin: 0;
       position: relative;
-      border-left: 5px solid var(--jungle-green);
-      border-right: 5px solid var(--jungle-green);
+      border-left: 5px solid var(--jungle-green-secondary);
+      border-right: 5px solid var(--jungle-green-secondary);
     }
     .section:nth-child(even) {
-      background: var(--jungle-bg);
-      border-left-color: var(--jungle-green-light);
-      border-right-color: var(--jungle-green-light);
+      background: var(--orange-soft);
+      border-left-color: var(--orange);
+      border-right-color: var(--orange);
     }
     .section h2 {
       margin: 0 0 20px;
       text-align: center;
-      font-size: 32px;
+      font-size: 29px;
       font-weight: 900;
-      font-family: "Poppins", "Montserrat", "Arial Black", sans-serif;
+      font-family: "Merriweather", "Georgia", "Times New Roman", serif;
       letter-spacing: 0.03em;
       text-transform: uppercase;
-      color: var(--orange);
+      color: var(--jungle-green-secondary);
       padding: 0;
     }
     .section h2::after {
@@ -114,15 +153,15 @@
       display: block;
       width: 100%;
       height: 5px;
-      background: var(--jungle-green);
+      background: linear-gradient(to right, var(--jungle-green-secondary), var(--orange));
       margin: 12px 0 0;
     }
-    .p { margin: 0 0 16px; color: var(--text); font-size: 16px; }
+    .p { margin: 0 0 16px; color: var(--text); font-size: 15px; }
     .muted { color: var(--muted); }
     .accent {
       color: var(--orange);
-      font-weight: 900;
-      font-family: "Poppins", "Montserrat", "Arial Black", sans-serif;
+      font-weight: 700;
+      font-family: "Product Sans", "Google Sans", "Inter", "Helvetica Neue", Arial, sans-serif;
     }
     .grid {
       display: grid;
@@ -134,17 +173,17 @@
       .grid { grid-template-columns: 1fr 1fr; }
     }
     .pill {
-      border: 3px solid var(--jungle-green);
+      border: 3px solid var(--jungle-green-secondary);
       padding: 20px 18px;
-      background: var(--jungle-bg);
+      background: var(--jungle-green-secondary-soft);
     }
     .pill .k {
       font-weight: 800;
-      font-family: "Poppins", "Montserrat", "Arial Black", sans-serif;
-      color: var(--orange);
+      font-family: "Merriweather", "Georgia", "Times New Roman", serif;
+      color: var(--jungle-green-secondary);
       margin-bottom: 8px;
       letter-spacing: 0.01em;
-      font-size: 18px;
+      font-size: 17px;
     }
     ul {
       margin: 12px 0 20px 24px;
@@ -152,13 +191,13 @@
     }
     li { 
       margin: 10px 0; 
-      font-size: 16px;
+      font-size: 15px;
       line-height: 1.6;
       position: relative;
       padding-left: 8px;
     }
     li::marker {
-      color: var(--jungle-green);
+      color: var(--jungle-green-secondary);
     }
     .events {
       display: grid;
@@ -170,16 +209,16 @@
       .events { grid-template-columns: 1fr 1fr; }
     }
     .event {
-      border: 3px solid var(--jungle-green);
+      border: 3px solid var(--jungle-green-secondary);
       padding: 20px 18px;
-      background: var(--jungle-bg);
+      background: var(--jungle-green-secondary-soft);
     }
     .event .name {
       font-weight: 800;
-      font-family: "Poppins", "Montserrat", "Arial Black", sans-serif;
-      color: var(--orange);
+      font-family: "Merriweather", "Georgia", "Times New Roman", serif;
+      color: var(--jungle-green-secondary);
       margin: 0 0 10px;
-      font-size: 20px;
+      font-size: 19px;
       letter-spacing: 0.01em;
     }
     .event .line {
@@ -210,7 +249,7 @@
     }
     .btn {
       display: inline-block;
-      background: var(--jungle-green);
+      background: var(--orange);
       color: #fff !important;
       text-decoration: none;
       font-weight: 900;
@@ -219,16 +258,23 @@
       letter-spacing: 0.04em;
       font-size: 16px;
       text-transform: uppercase;
-      border: 2px solid var(--jungle-green);
+      border: 2px solid var(--orange);
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .btn:hover {
+      background: var(--orange-bright);
+      transform: translateY(-2px);
     }
     .footer {
-      padding: 32px 24px 24px;
+      padding: 32px 48px 24px;
       text-align: center;
       color: var(--muted);
       font-size: 13px;
-      border-top: 4px solid var(--jungle-green);
+      border-top: 4px solid var(--jungle-green-secondary);
       margin-top: 20px;
-      background: var(--jungle-bg);
+      background: var(--jungle-green-secondary-soft);
+      max-width: 750px;
+      margin: 20px auto 0;
     }
     code {
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -238,11 +284,68 @@
       border-radius: 8px;
     }
     .highlight-box {
-      background: var(--jungle-bg);
-      border: 3px solid var(--jungle-green);
-      border-left: 8px solid var(--gold);
+      background: var(--orange-soft);
+      border: 3px solid var(--orange);
+      border-left: 8px solid var(--orange);
       padding: 20px 24px;
       margin: 24px 0;
+    }
+    .hero-section {
+      padding: 0;
+      max-width: 750px;
+      margin: 0 auto;
+      background: var(--jungle-green-secondary-soft);
+      border-left: 5px solid var(--jungle-green-secondary);
+      border-right: 5px solid var(--jungle-green-secondary);
+    }
+    .hero-image {
+      width: 100%;
+      height: 300px;
+      display: block;
+      object-fit: cover;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+    }
+    @media (max-width: 720px) {
+      .hero-image {
+        height: 200px;
+      }
+    }
+    .image-gallery {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      padding: 32px 48px;
+      max-width: 750px;
+      margin: 0 auto;
+      background: var(--orange-soft);
+      border-left: 5px solid var(--orange);
+      border-right: 5px solid var(--orange);
+    }
+    @media (min-width: 720px) {
+      .image-gallery {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .image-frame {
+      border: 4px solid var(--jungle-green-secondary);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--bg);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .image-frame:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+    .image-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
     }
   </style>
 </head>
@@ -252,56 +355,35 @@
       <div class="accent-line"></div>
 
       <div class="header">
-        <div class="hero-copy">
+        <div class="header-wrapper">
+          <div class="header-logo">
+            <img src="assets/urb-logo.png" alt="URB Consulting Logo" />
+          </div>
+          <div class="hero-copy">
             <h1 class="title">URB Consulting
               <br/><span class="subtitle">Winter 2026 Recruitment</span></h1>
-          <p class="sub">Technology • Entrepreneurship • Community</p>
+            <p class="sub">Technology • Entrepreneurship • Community</p>
+          </div>
         </div>
+      </div>
+
+      <div class="hero-section">
+        <img src="assets/hero-image.jpg" alt="URB Consulting Hero" class="hero-image" />
       </div>
 
       <div class="content">
 
         <div class="section">
-          <h2>Who Are We</h2>
+          <h2>The URB Community</h2>
           <p class="p">
             <strong>URB Consulting</strong> is the <span class="accent">fastest-growing</span> student-led consulting organization at the University of Michigan,
             focused on companies at the intersection of the <span class="accent">digital and physical worlds</span>—any industry that impacts the built environment
             including automotive, aviation, energy, real estate, mobility, and architecture and so many more!
           </p>
           <p class="p">
-            We work with innovative startups, government agencies, and industry-leading tech companies to deliver high-impact projects spanning
-            technical implementation, design analysis, and strategic decision making.
             Through this work, URB members develop entrepreneurial, technical and business acumen while solving real-world problems for companies in
             <span class="accent">internship style projects</span> to build your resume!
           </p>
-        </div>
-
-        <div class="section">
-          <h2>What We Do</h2>
-
-          <div class="grid">
-            <div class="pill">
-              <div class="k">Market Research &amp; Entry</div>
-              <div class="muted">We identify unique business opportunities in new markets for companies deploying products in urban contexts.</div>
-            </div>
-            <div class="pill">
-              <div class="k">App &amp; Web Development</div>
-              <div class="muted">We turn ideas into reality by building well-designed, functional applications optimized for business needs.</div>
-            </div>
-            <div class="pill">
-              <div class="k">UI/UX Design Work</div>
-              <div class="muted">We create delightful, research-backed user experiences through customer interviews and goal-oriented design.</div>
-            </div>
-            <div class="pill">
-              <div class="k">Data Analytics</div>
-              <div class="muted">We help organizations uncover growth opportunities by translating complex data into actionable insights.</div>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="section">
-          <h2>The URB Community</h2>
           <p class="p">
             URB is more than a consulting club- it's a <span class="accent">community</span> professionally and socially. Members support one another through:
           </p>
@@ -312,15 +394,27 @@
             <li>Collaborative project teams and social events</li>
           </ul>
           <p class="p">
-            Our members grow together, form close bonds, and gain <span class="accent">hands-on experience</span> that translates directly to immense personal and career growth.
+            Our members grow together, form close bonds, and gain <span class="accent">hands-on experience</span> that translates directly to immense personal and career growth. Members have utilized the skills they learned in URB to land consulting, Product Management and Data Analyst, roles at top tech companies including Microsoft, Bank of America, Adobe, GM and more!
           </p>
+        </div>
+
+        <div class="image-gallery">
+          <div class="image-frame">
+            <img src="assets/gallery-1.jpg" alt="URB Community Photo 1" />
+          </div>
+          <div class="image-frame">
+            <img src="assets/gallery-2.jpg" alt="URB Community Photo 2" />
+          </div>
+          <div class="image-frame">
+            <img src="assets/gallery-3.jpg" alt="URB Community Photo 3" />
+          </div>
         </div>
 
         <div class="section">
           <h2>Meet Us</h2>
           
           <div class="highlight-box">
-            <p class="p" style="margin:0; font-size: 18px; font-weight: 600; color: var(--jungle-green);">
+            <p class="p" style="margin:0; font-size: 18px; font-weight: 600; color: var(--text);">
               If you have an interest in technology and consulting, we would love to meet you! We welcome and encourage rushees from <span class="accent">every discipline</span>, no matter your major or experience level.
             </p>
           </div>
@@ -371,6 +465,42 @@
             <strong>URB Consulting</strong><br/>
             University of Michigan
           </p>
+        </div>
+
+        <div class="image-gallery">
+          <div class="image-frame">
+            <img src="assets/gallery-4.jpg" alt="URB Event Photo 1" />
+          </div>
+          <div class="image-frame">
+            <img src="assets/gallery-5.jpg" alt="URB Event Photo 2" />
+          </div>
+          <div class="image-frame">
+            <img src="assets/gallery-6.jpg" alt="URB Event Photo 3" />
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>What We Do</h2>
+
+          <div class="grid">
+            <div class="pill">
+              <div class="k">Market Research &amp; Entry</div>
+              <div class="muted">We identify unique business opportunities in new markets for companies deploying products in urban contexts.</div>
+            </div>
+            <div class="pill">
+              <div class="k">App &amp; Web Development</div>
+              <div class="muted">We turn ideas into reality by building well-designed, functional applications optimized for business needs.</div>
+            </div>
+            <div class="pill">
+              <div class="k">UI/UX Design Work</div>
+              <div class="muted">We create delightful, research-backed user experiences through customer interviews and goal-oriented design.</div>
+            </div>
+            <div class="pill">
+              <div class="k">Data Analytics</div>
+              <div class="muted">We help organizations uncover growth opportunities by translating complex data into actionable insights.</div>
+            </div>
+          </div>
+
         </div>
 
       </div>
